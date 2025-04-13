@@ -13,7 +13,7 @@ function corrected_rgb_image = adaptive_local_correction(distorted_image)
  
     % A different guide filter is used to enhance the high frequency portion of the L-channel
     L_blurred_small = imguidedfilter(L_channel, L_channel);
-    L_blurred_large = imguidedfilter(L_channel, L_channel * 0.5);  % 使用不同的引导图像
+    L_blurred_large = imguidedfilter(L_channel, L_channel * 0.5);  
 
     % Computed high frequency part
     L_high_freq_small = L_channel - L_blurred_small;
